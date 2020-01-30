@@ -43,9 +43,9 @@ PS.component.category.func.animate_categoriesFadeIn = (otherCategoryObjs)=>{
 	return new Promise((resolve, reject)=>{
 		for(i in otherCategoryObjs){
 			let obj = otherCategoryObjs[i];
-			obj.element.classList.add("fadeIn_category");
-			obj.element.classList.remove("fadeOut_category");
-			obj.element.classList.remove("displayNone");
+				obj.element.classList.add("fadeIn_category");
+				obj.element.classList.remove("fadeOut_category");
+				obj.element.classList.remove("displayNone");
 			if(Number(i) === otherCategoryObjs.length - 1){
 				resolve();
 			};
@@ -58,8 +58,8 @@ PS.component.category.func.animate_categoriesFadeOut = (otherCategoryObjs)=>{
 	return new Promise((resolve, reject)=>{
 		for(i in otherCategoryObjs){
 			let obj = otherCategoryObjs[i];
-			obj.element.classList.add("fadeOut_category");
-			obj.element.classList.remove("fadeIn_category");
+				obj.element.classList.add("fadeOut_category");
+				obj.element.classList.remove("fadeIn_category");
 			let afterFadeOutFinishes = setTimeout(()=>{
 				obj.element.classList.add("displayNone");
 			},160);
