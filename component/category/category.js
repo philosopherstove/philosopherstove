@@ -40,12 +40,12 @@ PS.component.category.func = {};
 ANIMATE
 *******/
 PS.component.category.func.animate_categoriesFadeIn = (otherCategoryObjs)=>{
-	return new Promise((resolve, reject)=>{
+  return new Promise((resolve, reject)=>{
 		for(i in otherCategoryObjs){
 			let obj = otherCategoryObjs[i];
-			obj.element.classList.add("fadeIn_category");
-			obj.element.classList.remove("fadeOut_category");
-			obj.element.classList.remove("displayNone");
+					obj.element.classList.add("fadeIn_category");
+					obj.element.classList.remove("fadeOut_category");
+					obj.element.classList.remove("displayNone");
 			if(Number(i) === otherCategoryObjs.length - 1){
 				resolve();
 			};
