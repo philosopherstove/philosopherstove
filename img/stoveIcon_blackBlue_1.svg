@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="251px" height="256px" viewBox="0 0 251 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>stoveIcon2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="stoveIcon256Black" transform="translate(-2.000000, 0.000000)">
+            <g id="stoveIcon2" transform="translate(2.000000, 0.000000)">
+                <path d="M0,30.1178073 C0,16.2564545 11.2315795,5.01960784 25.1001602,5.01960784 L225.89984,5.01960784 C239.762275,5.01960784 251,16.25031 251,30.1178073 L251,243.446466 C251,250.379591 245.37578,256 238.445485,256 L12.5545148,256 C5.62084776,256 0,250.376219 0,243.446466 L0,30.1178073 Z" id="Body" fill="#081F32"></path>
+                <g id="Grills" transform="translate(25.100000, 0.000000)" fill="#081F32">
+                    <rect id="Grill-L" x="0" y="0" width="75.3" height="5.01960784"></rect>
+                    <rect id="Grill-R" x="125.5" y="0" width="75.3" height="5.01960784"></rect>
+                </g>
+                <g id="Controls" transform="translate(37.650000, 30.117647)" fill="#ECECEC">
+                    <ellipse id="Oval-1" cx="12.55" cy="12.5490196" rx="12.55" ry="12.5490196"></ellipse>
+                    <ellipse id="Oval-2" cx="62.75" cy="12.5490196" rx="12.55" ry="12.5490196"></ellipse>
+                    <ellipse id="Oval-3" cx="112.95" cy="12.5490196" rx="12.55" ry="12.5490196"></ellipse>
+                    <ellipse id="Oval-4" cx="163.15" cy="12.5490196" rx="12.55" ry="12.5490196"></ellipse>
+                </g>
+                <g id="Oven" transform="translate(37.650000, 92.862745)" stroke="#ECECEC" stroke-width="5.01960784">
+                    <rect id="Oven-Rect" x="2.50980392" y="2.50980392" width="170.680392" height="120.470588" rx="5.01960784"></rect>
+                    <path d="M17.57,103.793792 L106.311901,15.0588235" id="Line-3" stroke-linecap="square"></path>
+                    <path d="M22.59,64.4459157 L66.9609505,20.0784314" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M20.08,35.3156212 L37.8283802,17.5686275" id="Line-1" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

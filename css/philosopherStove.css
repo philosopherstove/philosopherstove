@@ -1,0 +1,75 @@
+/********
+Variables
+*********/
+:root {
+	--blackBlue_1: rgb(8,31,50);
+	--blue_1:	   rgb(0,73,144);
+	--red_1:	   rgb(202,48,67);
+	--white_1:	   rgb(234,234,234);
+
+	--bezier_linksUpAndIn: cubic-bezier(.50, .10, .30, .80);
+	--bezier_fade:		   cubic-bezier(.60, .10, .90, .60);
+}
+
+
+/************
+Reset/Default
+*************/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+
+	font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+	/* Hide Scrollbar */
+    -ms-overflow-style: none;
+}
+/* Hide Scrollbar */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	color: inherit;
+}
+
+
+/****
+Style
+*****/
+#wrap_philosopherstove {
+	position: relative;
+}
+
+#navWrap_PS {
+	position: relative;
+	width: 80%;
+	margin: 5vh auto 0;
+}
+
+#homeAndBar_PS .divideLine {
+	width: 100%;
+	height: 2px;
+	margin-top: 10px;
+}
+
+#contentSpace_PS {
+	position: absolute;
+	top: 70px;
+	left: 10%;
+	width: 80%;
+	z-index: 100;
+}
+
+.contentSpace_height {
+	height: 85%;
+}

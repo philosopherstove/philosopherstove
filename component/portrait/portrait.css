@@ -1,0 +1,633 @@
+#portraitSpace_PS {
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	z-index: -1;
+}
+
+
+#portraitSpace_PS > div > svg {
+	position: fixed;
+	bottom: -4.2%;
+	right: -8.8%;
+	width: 80%;
+	height: calc(100vh - 130px);
+	transform: scale(0.9);
+	z-index: -1;
+}
+@media (max-width: 1030px) and (min-height: 854px){
+	#portraitSpace_PS > div > svg {
+	    transform: scale(1.5);
+	    right: 0%;
+	    bottom: -15%;
+	}
+}
+@media (max-width: 425px){
+	#portraitSpace_PS > div > svg {
+	    transform: scale(1.5);
+	    right: 0%;
+	    bottom: -15%;
+	}
+}
+
+
+.portrait_fadeOut {
+    opacity: 0;
+    transition: opacity 0.32s;
+}
+
+
+#portraitSpace_PS > .touchspace {
+	width: 50%;
+	height: 50vh;
+	position: absolute;
+	right: 0;
+	z-index: 1;
+
+	border: 1px solid red;
+}
+
+
+/**************
+face - topRight
+***************/
+#face #topRight {
+	stroke-dasharray: 645;
+  	stroke-dashoffset: 645;
+  	animation: face_upperRight 1.5s linear forwards;
+}
+@keyframes face_upperRight {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*****************
+face - bottomRight
+******************/
+#face #bottomRight {
+	stroke-dasharray: 489;
+  	stroke-dashoffset: 489;
+  	animation: face_bottomRight 1.5s linear forwards;
+}
+@keyframes face_bottomRight {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/************
+face - bottom
+*************/
+#face #bottom {
+	stroke-dasharray: 1087;
+  	stroke-dashoffset: 1087;
+  	animation: face_bottom 1.5s linear forwards;
+}
+@keyframes face_bottom {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/******************
+face - bottomShadow
+*******************/
+#face #bottomShadow {
+	stroke-dasharray: 492;
+  	stroke-dashoffset: 492;
+  	animation: face_bottomShadow 1.5s linear forwards;
+}
+@keyframes face_bottomShadow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/***************
+face - mainLight
+****************/
+#face #mainLight {
+	stroke-dasharray: 1684;
+  	stroke-dashoffset: 1684;
+  	animation: face_mainLight 1.5s linear forwards;
+}
+@keyframes face_mainLight {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*******************
+face - leftCheekLine
+********************/
+#face #leftCheekLine {
+	stroke-dasharray: 102;
+  	stroke-dashoffset: 102;
+  	animation: face_leftCheekLine 1.5s linear forwards;
+}
+@keyframes face_leftCheekLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/************
+leftEye - lid
+*************/
+#leftEye #lid {
+	stroke-dasharray: 177;
+  	stroke-dashoffset: 177;
+  	animation: leftEye_lid 1.5s linear forwards;
+}
+@keyframes leftEye_lid {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*********************
+leftEye - leftEyeGroup
+**********************/
+#leftEye #leftEyeGroup {
+	stroke-dasharray: 71;
+  	stroke-dashoffset: 71;
+}
+
+/*******************
+leftEye - bottomLine
+********************/
+#leftEye #bottomLine {
+	stroke-dasharray: 49;
+  	stroke-dashoffset: 49;
+  	animation: leftEye_bottomLine 1.5s linear forwards;
+}
+@keyframes leftEye_bottomLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*************
+leftEye - brow
+**************/
+#leftEye #brow {
+	stroke-dasharray: 177;
+  	stroke-dashoffset: 177;
+  	animation: leftEye_brow 1.5s linear forwards;
+}
+@keyframes leftEye_brow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*************************
+leftEye - outerSurrounding
+**************************/
+#leftEye #outerSurrounding {
+	stroke-dasharray: 307;
+  	stroke-dashoffset: 307;
+  	animation: leftEye_outerSurrounding 1.5s linear forwards;
+}
+@keyframes leftEye_outerSurrounding {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/*************
+rightEye - lid
+**************/
+#rightEye #lid {
+	stroke-dasharray: 216;
+  	stroke-dashoffset: 216;
+  	animation: rightEye_lid 1.5s linear forwards;
+}
+@keyframes rightEye_lid {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/***********************
+rightEye - rightEyeGroup
+************************/
+#rightEye #rightEyeGroup {
+	stroke-dasharray: 77;
+  	stroke-dashoffset: 77;
+}
+
+/********************
+rightEye - bottomLine
+*********************/
+#rightEye #bottomLine {
+	stroke-dasharray: 52;
+  	stroke-dashoffset: 52;
+  	animation: rightEye_bottomLine 1.5s linear forwards;
+}
+@keyframes rightEye_bottomLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/**************
+rightEye - brow
+***************/
+#rightEye #brow {
+	stroke-dasharray: 287;
+  	stroke-dashoffset: 287;
+  	animation: rightEye_brow 1.5s linear forwards;
+}
+@keyframes rightEye_brow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/*****************
+ear - outerRimLine
+******************/
+#ear #outerRimLine {
+	stroke-dasharray: 164;
+  	stroke-dashoffset: 164;
+  	animation: ear_outerRimLine 1.5s linear forwards;
+}
+@keyframes ear_outerRimLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/**************
+ear - innerDish
+***************/
+#ear #innerDish {
+	stroke-dasharray: 149;
+  	stroke-dashoffset: 149;
+  	animation: ear_innerDish 1.5s linear forwards;
+}
+@keyframes ear_innerDish {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*********
+ear - bulk
+**********/
+#ear #bulk {
+	stroke-dasharray: 515;
+  	stroke-dashoffset: 515;
+  	animation: ear_bulk 1.5s linear forwards;
+}
+@keyframes ear_bulk {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/************************
+ear - bottomRightDarkSpot
+*************************/
+#ear #bottomRightDarkSpot {
+	stroke-dasharray: 38;
+  	stroke-dashoffset: 38;
+  	animation: ear_bottomRightDarkSpot 1.5s linear forwards;
+}
+@keyframes ear_bottomRightDarkSpot {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/***********************
+ear - bottomLeftDarkSpot
+************************/
+#ear #bottomLeftDarkSpot {
+	stroke-dasharray: 66;
+  	stroke-dashoffset: 66;
+  	animation: ear_bottomLeftDarkSpot 1.5s linear forwards;
+}
+@keyframes ear_bottomLeftDarkSpot {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/************************
+ear - topRightDarkSpot
+*************************/
+#ear #topRightDarkSpot {
+	stroke-dasharray: 132;
+  	stroke-dashoffset: 132;
+  	animation: ear_topRightDarkSpot 1.5s linear forwards;
+}
+@keyframes ear_topRightDarkSpot {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/********************
+ear - topLeftDarkSpot
+*********************/
+#ear #topLeftDarkSpot {
+	stroke-dasharray: 53;
+  	stroke-dashoffset: 53;
+  	animation: ear_topLeftDarkSpot 1.5s linear forwards;
+}
+@keyframes ear_topLeftDarkSpot {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/******************
+nose - rightShadow
+*******************/
+#nose #rightShadow {
+	stroke-dasharray: 240;
+  	stroke-dashoffset: 240;
+  	animation: nose_rightShadow 1.5s linear forwards;
+}
+@keyframes nose_rightShadow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*****************
+nose - leftNostril
+******************/
+#nose #leftNostril {
+	stroke-dasharray: 44;
+  	stroke-dashoffset: 44;
+  	animation: nose_leftNostril 1.5s linear forwards;
+}
+@keyframes nose_leftNostril {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/**********************
+nose - upperRightShadow
+***********************/
+#nose #upperRightShadow {
+	stroke-dasharray: 186;
+  	stroke-dashoffset: 186;
+  	animation: nose_upperRightShadow 1.5s linear forwards;
+}
+@keyframes nose_upperRightShadow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/************
+nose - bottom
+*************/
+#nose #bottom {
+	stroke-dasharray: 125;
+  	stroke-dashoffset: 125;
+  	animation: nose_bottom 1.5s linear forwards;
+}
+@keyframes nose_bottom {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/***************
+nose - underDark
+****************/
+#nose #underDark {
+	stroke-dasharray: 298;
+  	stroke-dashoffset: 298;
+  	animation: nose_underDark 1.5s linear forwards;
+}
+@keyframes nose_underDark {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/******************
+nose - rightNostril
+*******************/
+#nose #rightNostril {
+	stroke-dasharray: 82;
+  	stroke-dashoffset: 82;
+  	animation: nose_rightNostril 1.5s linear forwards;
+}
+@keyframes nose_rightNostril {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/****************
+mouth - rightDark
+*****************/
+#mouth #rightDark {
+	stroke-dasharray: 271;
+  	stroke-dashoffset: 271;
+  	animation: mouth_rightDark 1.5s linear forwards;
+}
+@keyframes mouth_rightDark {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/****************
+mouth - upperDark
+*****************/
+#mouth #upperDark {
+	stroke-dasharray: 200;
+  	stroke-dashoffset: 200;
+  	animation: mouth_upperDark 1.5s linear forwards;
+}
+@keyframes mouth_upperDark {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*****************
+mouth - underDivet
+******************/
+#mouth #underDivet {
+	stroke-dasharray: 65;
+  	stroke-dashoffset: 65;
+  	animation: mouth_underDivet 1.5s linear forwards;
+}
+@keyframes mouth_underDivet {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*********************
+mouth - underDivetLeft
+**********************/
+#mouth #underDivetLeft {
+	stroke-dasharray: 53;
+  	stroke-dashoffset: 53;
+  	animation: mouth_underDivetLeft 1.5s linear forwards;
+}
+@keyframes mouth_underDivetLeft {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/************************
+mouth - upperLipNoseDivet
+*************************/
+#mouth #upperLipNoseDivet {
+	stroke-dasharray: 30;
+  	stroke-dashoffset: 30;
+  	animation: mouth_upperLipNoseDivet 1.5s linear forwards;
+}
+@keyframes mouth_upperLipNoseDivet {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/******************
+mouth - darkLipLine
+*******************/
+#mouth #darkLipLine {
+	stroke-dasharray: 244;
+  	stroke-dashoffset: 244;
+  	animation: mouth_darkLipLine 1.5s linear forwards;
+}
+@keyframes mouth_darkLipLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/***************
+#neck #leftLight
+****************/
+#neck #leftLight {
+	stroke-dasharray: 208;
+  	stroke-dashoffset: 208;
+  	animation: neck_lightLeft 1.5s linear forwards;
+}
+@keyframes neck_lightLeft {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/******************
+neck - mainContours
+*******************/
+#neck #mainContours {
+	stroke-dasharray: 826;
+  	stroke-dashoffset: 826;
+  	animation: neck_mainContours 1.5s linear forwards;
+}
+@keyframes neck_mainContours {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/****************
+neck - upperAdams
+*****************/
+#neck #upperAdams {
+	stroke-dasharray: 200;
+  	stroke-dashoffset: 200;
+  	animation: neck_upperAdams 1.5s linear forwards;
+}
+@keyframes neck_upperAdams {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/****************
+neck - lowerAdams
+*****************/
+#neck #lowerAdams {
+	stroke-dasharray: 171;
+  	stroke-dashoffset: 171;
+  	animation: neck_lowerAdams 1.5s linear forwards;
+}
+@keyframes neck_lowerAdams {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/***************
+neck - rightLine
+****************/
+#neck #rightLine {
+	stroke-dasharray: 261;
+  	stroke-dashoffset: 261;
+  	animation: neck_rightLine 1.5s linear forwards;
+}
+@keyframes neck_rightLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/************
+shirt - right
+*************/
+#shirt #right {
+	stroke-dasharray: 381;
+  	stroke-dashoffset: 381;
+  	animation: shirt_right 1.5s linear forwards;
+}
+@keyframes shirt_right {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/***********
+shirt - left
+************/
+#shirt #left {
+	stroke-dasharray: 1645;
+  	stroke-dashoffset: 1645;
+  	animation: shirt_left 1.5s linear forwards;
+}
+@keyframes shirt_left {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/***
+hair
+****/
+#hair {
+	stroke-dasharray: 1404;
+  	stroke-dashoffset: 1404;
+	animation: hair 1.5s linear forwards;
+}
+@keyframes hair {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

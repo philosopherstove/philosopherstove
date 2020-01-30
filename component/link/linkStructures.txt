@@ -1,0 +1,59 @@
+=======================
+componentName structure
+=======================
+input
+factory
+objs
+setting
+    height
+    marginTop
+    position
+        defaultLeft
+        extraLeftForEndPosition
+        extraTopForStartPosition
+        selectedTop
+    scrollTop
+    timingControlPoints
+    timingRatios
+state
+    animating
+    selected
+func
+    animate_linksFadeIn
+    animate_linksFadeOut
+    animate_swoop
+    calculate_swoopPath
+    get_associatedLinkObjs_fromCategoryName
+    get_obj_fromLinkName
+    get_unselectedLinkObjs
+    give_categoryObjs_associatedLinks
+    select_link
+    serve_links
+    set_positions
+    transition_downAndOut
+    transition_toSelected
+    transition_toUnselected
+
+
+================
+object structure
+================
+associated
+...element
+setting
+    name
+    info
+    keywords
+    tech
+    url
+    html
+    css
+    js
+    position
+        ...default
+        ...selected
+        ...swoopPath_forward
+        ...swoopPath_reverse
+state
+    animating
+    selected

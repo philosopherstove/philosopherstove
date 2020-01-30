@@ -1,0 +1,49 @@
+===================
+component structure
+===================
+input
+factory
+objs
+setting
+    position
+        timingControlPoints
+        timingRatios
+        x_default
+        x_selected
+        y_selected_desktop
+        y_selected_mobile
+state
+    animating
+    selected
+func
+    animate_categoriesFadeIn
+    animate_categoriesFadeOut
+    animate_swoop
+    apply_position
+    calculate_swoopPath
+    get_unselectedCategoryObjs
+    select_category
+    set_apply_positions
+    set_positions_differentByViewport
+    transition_categorySelected
+    transition_categoryUnselected
+
+
+=============
+obj structure
+=============
+associated
+element
+setting
+    name
+    color
+    position
+        default
+        selected
+        swoopPath_forward
+        swoopPath_reverse
+        y_default_desktop
+        y_default_mobile
+state
+    animating
+    selected

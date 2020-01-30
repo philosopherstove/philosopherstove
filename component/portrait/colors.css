@@ -1,0 +1,72 @@
+/***********************************
+transitions time for stroke and fill
+************************************/
+#linePortrait .stroke,
+#linePortrait .fill {
+    transition: 1.5s;
+}
+
+
+/**********
+blackBlue_1
+***********/
+.draw.blackBlue_1 {
+    stroke: var(--blackBlue_1);
+    fill: transparent;
+}
+
+.stroke.blackBlue_1 {
+    stroke: var(--blackBlue_1);
+}
+
+.fill.blackBlue_1 {
+    fill: var(--blackBlue_1);
+}
+
+
+/*****
+blue_1
+******/
+.draw.blue_1 {
+    stroke: var(--blue_1);
+    fill: transparent;
+}
+
+.stroke.blue_1 {
+    stroke: var(--blue_1);
+}
+
+.fill.blue_1 {
+    fill: var(--blue_1);
+}
+
+
+/****
+red_1
+*****/
+.draw.red_1 {
+    stroke: var(--red_1);
+    fill: transparent;
+}
+.stroke.red_1 {
+    stroke: var(--red_1);
+}
+.fill.red_1 {
+    fill: var(--red_1);
+}
+
+
+/******
+white_1
+*******/
+.draw.white_1 {
+    stroke: var(--white_1);
+    fill: transparent;
+}
+.stroke.white_1 {
+    stroke: var(--white_1);
+}
+
+.fill.white_1 {
+    fill: var(--white_1);
+}

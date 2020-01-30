@@ -1,0 +1,88 @@
+#navCategories_PS {
+	position: relative;
+}
+
+#navCategories_PS li {
+	position: absolute;
+	height: 38px;
+	margin-left: -2px;
+	font-family: KozGoPr6N;
+	font-weight: 200;
+	font-size: 36px;
+    user-select: none;
+	z-index: 1;
+}
+@media (max-width: 425px){
+	#navCategories_PS li {
+	    font-size: 30px;
+	}
+}
+
+
+/**************
+initial upAndIn
+***************/
+#navCategories_PS .upAndIn_navCat_1 {
+	animation: 1s upAndIn_navCat_1 var(--bezier_linksUpAndIn);
+}
+@keyframes upAndIn_navCat_1 {
+	0%{  	opacity: 0; top: 48px;}
+	40%{	opacity: 0;	top: 48px;}
+	100%{	opacity: 1;	top: 14px;}
+}
+
+#navCategories_PS .upAndIn_navCat_2 {
+	animation: 1.1s upAndIn_navCat_2 var(--bezier_linksUpAndIn);
+}
+@keyframes upAndIn_navCat_2 {
+	0%{		opacity: 0; top: 92px;}
+	45%{	opacity: 0;	top: 92px;}
+	100%{	opacity: 1;	top: 58px;}
+}
+@media (max-width: 425px){
+	#navCategories_PS .upAndIn_navCat_2 {
+		animation: 1.1s upAndIn_navCat_2 var(--bezier_linksUpAndIn);
+	}
+	@keyframes upAndIn_navCat_2 {
+		0%{		opacity: 0; top: 86px;}
+		45%{	opacity: 0;	top: 86px;}
+		100%{	opacity: 1;	top: 52px;}
+	}
+}
+
+
+#navCategories_PS li a {
+	position: relative;
+	top: -18px;
+}
+
+
+/****
+Fades
+*****/
+#navCategories_PS li.fadeOut_category {
+    animation: 0.16s fadeOut_category var(--bezier_fade);
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOut_category {
+    0%{
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+#navCategories_PS li.fadeIn_category {
+	animation: 0.16s fadeIn_category var(--bezier_fade);
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn_category {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

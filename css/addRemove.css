@@ -1,0 +1,72 @@
+.backgroundColor_white_1 {
+	background-color: var(--white_1);
+}
+
+.backgroundColor_blackBlue_1 {
+	background-color: var(--blackBlue_1);
+}
+
+
+
+.cursorDefault {
+	cursor: default;
+}
+
+.cursorGrab {
+	cursor: grab;
+	-moz-cursor: grab;
+	-ms-cursor: grab;
+	-webkit-cursor: grab;
+}
+
+.cursorPointer {
+	cursor: pointer;
+}
+
+
+
+.displayBlock {
+	display: block;
+}
+
+.displayFlex {
+	display: flex;
+}
+
+.displayNone {
+	display: none;
+}
+
+
+
+.justifyContentCenter {
+	justify-content: center;
+}
+
+
+
+.overflowHidden {
+	overflow: hidden;
+}
+
+
+
+.positionAbsolute {
+	position: absolute;
+}
+
+
+
+.visibilityHidden {
+	visibility: hidden;
+}
+
+
+
+.zIndex-1 {
+	z-index: -1;
+}
+
+.zIndex2 {
+	z-index: 2;
+}

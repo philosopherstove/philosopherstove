@@ -1,0 +1,12 @@
+#home_PS {
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
+	user-select: none;
+}
+@media (max-width: 425px){
+    #home_PS {
+        width: 24px;
+        height: 24px;
+    }
+}

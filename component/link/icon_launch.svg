@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="68px" viewBox="0 0 68 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Launch</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-833.000000, -1005.000000)" fill-rule="nonzero" fill="#081F32">
+            <path d="M893.444444,1065.44444 L840.555556,1065.44444 L840.555556,1012.55556 L867,1012.55556 L867,1005 L840.555556,1005 C836.4,1005 833,1008.4 833,1012.55556 L833,1065.44444 C833,1069.6 836.4,1073 840.555556,1073 L893.444444,1073 C897.6,1073 901,1069.6 901,1065.44444 L901,1039 L893.444444,1039 L893.444444,1065.44444 Z M874.555556,1005 L874.555556,1012.55556 L888.155556,1012.55556 L851.133333,1049.57778 L856.422222,1054.86667 L893.444444,1017.84444 L893.444444,1031.44444 L901,1031.44444 L901,1005 L874.555556,1005 Z" id="Launch"></path>
+        </g>
+    </g>
+</svg>

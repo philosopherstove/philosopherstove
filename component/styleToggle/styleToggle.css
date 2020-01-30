@@ -1,0 +1,69 @@
+/* Toggle Container */
+.styleToggleContainer {
+	position: absolute;
+	top: 4px;
+	right: 0;
+}
+
+
+/* Toggle Body */
+.styleToggleContainer .toggleBody {
+	position: relative;
+	width: 44px;
+	height: 24px;
+	background-color: transparent;
+	border-radius: 45px;
+	border: 1px solid;
+	border-color: var(--blackBlue_1);
+	cursor: pointer;
+	transition-property: border-color;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.61, -0.03, 0.26, 1);
+}
+@media (max-width: 425px){
+    .styleToggleContainer .toggleBody {
+    	width: 39px;
+    	height: 20px;
+    }
+}
+.styleToggleContainer .toggleBody.toggle_off {
+  border-color: var(--blackBlue_1);
+}
+.styleToggleContainer .toggleBody.toggle_on {
+  border-color: var(--white_1);
+}
+
+
+/* Toggle Ball */
+.styleToggleContainer .toggleBall {
+	position: relative;
+    top: 1px;
+	left: 1px;
+    width: 20px;
+    height: 20px;
+	background-color: var(--blackBlue_1);
+    border-radius: 28px;
+    transition-property: left, background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.61, -0.03, 0.26, 1);
+}
+.styleToggleContainer .toggleBall.toggle_off {
+  left: 1px;
+  background-color: var(--blackBlue_1);
+}
+.styleToggleContainer .toggleBall.toggle_on {
+  left: 21px;
+  background-color: var(--white_1);
+}
+@media (max-width: 425px){
+    .styleToggleContainer .toggleBall {
+    	width: 16px;
+    	height: 16px;
+    }
+    .styleToggleContainer .toggleBall.toggle_off {
+      left: 1px;
+    }
+    .styleToggleContainer .toggleBall.toggle_on {
+      left: 20px;
+    }
+}
