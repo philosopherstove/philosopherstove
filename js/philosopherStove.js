@@ -203,17 +203,17 @@ PS.func.set_history = ()=>{
 	if(linkState === true){
 		let categoryName = obj.category[1];
 		let linkName     = obj.link[1];
-		url = `/newimp/?category=${categoryName}&link=${linkName}`;
+		url = `/?category=${categoryName}&link=${linkName}`;
 	}
 	// >> Case 2 - category selected
 	else
 	if(categoryState === true){
 		let categoryName = obj.category[1];
-		url = `/newimp/?category=${categoryName}`;
+		url = `/?category=${categoryName}`;
 	}
 	// >> Case 3 - at home (category not selected)
 	else if(categoryState === false){
-		url = "/newimp/";
+		url = "/";
 	};
 
 	// > history pushState
@@ -222,6 +222,8 @@ PS.func.set_history = ()=>{
 
 
 PS.func.test_isWithin = (coords, elem)=>{
+	if(elem === null){return;};
+	
 	let x = coords[0];
 	let y = coords[1];
 

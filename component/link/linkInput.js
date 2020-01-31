@@ -12,7 +12,7 @@ PS.component.link.input = [
             },
             {
                 name: "Resume",
-                url: ""
+                url: "http://philosopherstove.com/stevenDarolfiResume.pdf"
             },
             {
                 name: "LinkedIn",
@@ -24,82 +24,29 @@ PS.component.link.input = [
         category: "APPS",
         links: [
             {
-                name: "Reader",
-                url: "http://philosopherstove.com/newimp/greyBorder",
-                github: "https://github.com/philosopherstove",
-                dimensions: ["px", 320, 568]
-            },
-            {
-                name: "Personal Time Tracker",
-                url: "http://philosopherstove.com/newimp/greyBorder",
+                name: "Time Tracker",
+                url: "http://philosopherstove.com/listee/",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["px", 320, 568]
             },
             {
                 name: "Upcoming Planner",
-                url: "http://philosopherstove.com/newimp/greyBorder",
+                url: "https://philosopherstove.github.io/a5_dayPlanner/",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["px", 320, 568]
             },
             {
                 name: "Note Taker",
-                url: "http://philosopherstove.com/newimp/greyBorder",
+                url: "https://notetaker-h.herokuapp.com/",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["px", 320, 568]
             },
             {
-                name: "Bezier Visualizer",
-                url: "http://philosopherstove.com/newimp/greyBorder",
-                github: "https://github.com/philosopherstove",
-                dimensions: ["%", 100, 100]
-            },
-            {
-                name: "Netrunner Decks",
-                url: "http://philosopherstove.com/newimp/greyBorder",
-                github: "https://github.com/philosopherstove",
-                dimensions: ["%", 100, 100]
-            },
-            {
-                name: "Toronto Area Resources",
-                url: "http://philosopherstove.com/newimp/greyBorder",
-                github: "https://github.com/philosopherstove",
-                dimensions: ["%", 100, 100]
-            },
-            {
-                name: "FitHub",
-                url: "http://philosopherstove.com/newimp/greyBorder",
-                github: "https://github.com/philosopherstove",
-                dimensions: ["%", 100, 100]
-            },
-            {
-                name: "Yumi Jobs",
-                url: "http://philosopherstove.com/newimp/greyBorder",
-                github: "https://github.com/philosopherstove",
-                dimensions: ["%", 100, 100]
-            },
-            {
-                name: "Food Fight",
-                url: "http://philosopherstove.com/newimp/greyBorder",
+                name: "Password Generator",
+                url: "https://philosopherstove.github.io/passwordGenerator",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["px", 320, 568]
-            },
-            {
-                name: "Time Slot",
-                url: "http://philosopherstove.com/newimp/greyBorder",
-                github: "https://github.com/philosopherstove",
-                dimensions: ["px", 320, 568]
-            },
-            {
-                name: "Ice Dogs",
-                url: "http://philosopherstove.com/newimp/greyBorder",
-                github: "https://github.com/philosopherstove",
-                dimensions: ["px", 320, 568]
-            },
-            {
-                name: "Chants",
-                url: "http://philosopherstove.com/newimp/greyBorder",
-                github: "https://github.com/philosopherstove",
-                dimensions: ["px", 320, 568]
+                // dimensions: ["%", 100, 100]
             }
         ]
     }
