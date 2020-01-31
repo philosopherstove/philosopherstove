@@ -13,8 +13,9 @@ PS.component.category.setting.position.x_default  = 0;
 PS.component.category.setting.position.x_selected = 63
 PS.component.category.setting.position.y_selected_desktop = -48; if(navigator.platform.includes("Win")){PS.component.category.setting.position.y_selected_desktop = -52;}; // smooths over the category selected position being slightly off on windows machines
 PS.component.category.setting.position.y_selected_mobile  = -40;
-PS.component.category.setting.timingControlPoints = [0.20, 0.70, 0.70, 0.20];
-PS.component.category.setting.timingRatios        = [];
+PS.component.category.setting.timing = {};
+PS.component.category.setting.timing.controlPoints = [0.20, 0.70, 0.70, 0.20];
+PS.component.category.setting.timing.ratios        = [];
 
 
 /****
@@ -40,12 +41,12 @@ PS.component.category.func = {};
 ANIMATE
 *******/
 PS.component.category.func.animate_categoriesFadeIn = (otherCategoryObjs)=>{
-  return new Promise((resolve, reject)=>{
+    return new Promise((resolve, reject)=>{
 		for(i in otherCategoryObjs){
 			let obj = otherCategoryObjs[i];
-					obj.element.classList.add("fadeIn_category");
-					obj.element.classList.remove("fadeOut_category");
-					obj.element.classList.remove("displayNone");
+				obj.element.classList.add("fadeIn_category");
+				obj.element.classList.remove("fadeOut_category");
+				obj.element.classList.remove("displayNone");
 			if(Number(i) === otherCategoryObjs.length - 1){
 				resolve();
 			};
@@ -73,9 +74,7 @@ PS.component.category.func.animate_categoriesFadeOut = (otherCategoryObjs)=>{
 
 PS.component.category.func.animate_swoop = (obj, direction)=>{
 	return new Promise((resolve, reject)=>{
-
 		let elem = obj.element;
-
 		let path;
 		let sPos;
 		let fPos;
@@ -90,48 +89,35 @@ PS.component.category.func.animate_swoop = (obj, direction)=>{
 			sPos = obj.setting.position.selected;
 			fPos = obj.setting.position.default;
 		};
-
 		let tTotal = 320; /* 320ms/0.32s */
 		let tStart = Date.now();
 		let tFinal = tStart + tTotal;
-
 		let tRatio;
 		let topCurr;
 		let leftCurr;
 		let animId;
 		animate();
-
 		function animate(){
-
 			let tCurr = Date.now();
-
 			if(tCurr > tFinal){
-
 				leftCurr        = fPos[0];
 				topCurr         = fPos[1];
 				elem.style.left = `${ leftCurr }px`;
 				elem.style.top  = `${ topCurr }px`;
-
 				cancelAnimationFrame(animId);
 				resolve();
 			}
 			else{
-
 				tRatio = (tCurr - tStart) / tTotal;
-
-				for(let i = 0; i < PS.component.category.setting.timingRatios.length; i++){
-
-					if(PS.component.category.setting.timingRatios[i][1] > tRatio){ /* passed current tRatio in pvtRatios array */
-						/* since passing current tRatio value in pvtRatios is condition to select, take an average of value before and after selected pvtRatio for better accuracy */
-						leftCurr        = ( (path[i - 1][0] + path[i + 1][0]) / 2 ) + sPos[0];
+				for(let i = 0; i < PS.component.category.setting.timing.ratios.length; i++){
+					if(PS.component.category.setting.timing.ratios[i][1] > tRatio){ /* passed current tRatio in pvtRatios array */
+						leftCurr        = ( (path[i - 1][0] + path[i + 1][0]) / 2 ) + sPos[0]; /* since passing current tRatio value in pvtRatios is condition to select, take an average of value before and after selected pvtRatio for better accuracy */
 						topCurr         = ( (path[i - 1][1] + path[i + 1][1]) / 2 ) + sPos[1];
 						elem.style.left = `${ leftCurr }px`;
 						elem.style.top  = `${ topCurr }px`;
-
 						break;
 					};
 				};
-
 				animId = requestAnimationFrame(animate);
 			};
 		};
@@ -142,7 +128,6 @@ PS.component.category.func.animate_swoop = (obj, direction)=>{
 /****
 APPLY
 *****/
-/* once positions set for obj/component, apply position to element. Conditional on whether category is selected or not */
 PS.component.category.func.apply_position = (obj)=>{
 	if(obj.state.selected === false){
 		obj.element.style.left = `${obj.setting.position.default[0]}px`;
@@ -156,13 +141,13 @@ PS.component.category.func.apply_position = (obj)=>{
 
 
 PS.component.category.func.apply_style = ()=>{
-	if(PS.component.category.state.selected[0] === false){ // put transition classes on them
+	if(PS.component.category.state.selected[0] === false){ // at home, transition upAndIn
 		for(i in PS.component.category.objs){
 			let obj = PS.component.category.objs[i];
 				obj.element.classList.add(`upAndIn_navCat_${Number(i)+1}`);
 		};
 	}
-	else{ // put displayNone class on the categories that are not the selected one
+	else{ // categories that are not selected displayNone
 		for(obj of PS.component.category.objs){
 			if(obj.setting.name !== PS.component.category.state.selected[1].setting.name){
 				obj.element.classList.add('displayNone');
@@ -179,7 +164,7 @@ PS.component.category.func.apply_view = ()=>{
 			PS.component.category.func.set_positions_differentByViewport(obj); // set position for each
 			PS.component.category.func.apply_position(obj); // apply position to each
 			if(Number(i) === PS.component.category.objs.length - 1){ // end of loop
-				PS.component.category.func.apply_style(); // apply to all
+				PS.component.category.func.apply_style(); // apply style to all
 				resolve();
 			};
 		};
@@ -191,31 +176,22 @@ PS.component.category.func.apply_view = ()=>{
 CALCULATE
 *********/
 PS.component.category.func.calculate_swoopPath = (direction = null)=>{
-
 	for(let i = 0; i < PS.component.category.objs.length; i++){
-
 		let obj = PS.component.category.objs[i];
-
 		let points; /* Want perfect quarter circle swoop. Different control points depending on direction of swoop. */
 		let pathRatios;
 		let xDistance; /* Distances are final position minus start position */
 		let yDistance;
 		let coords = [];
-
 		if(direction === "forward"){
-
 			points     = [1, 0];
 			pathRatios = PS.func.calculate_bezierCurves(points);
 			xDistance  = obj.setting.position.selected[0] - obj.setting.position.default[0];
 			yDistance  = obj.setting.position.selected[1] - obj.setting.position.default[1];
-
 			for(let a = 0; a < pathRatios.length; a++){
-
 				let x = pathRatios[a][0] * xDistance;
 				let y = pathRatios[a][1] * yDistance;
-
 				coords.push( [x, y] );
-
 				if(a === pathRatios.length - 1){
 					obj.setting.position.swoopPath_forward = coords;
 				};
@@ -223,19 +199,14 @@ PS.component.category.func.calculate_swoopPath = (direction = null)=>{
 		}
 		else
 		if(direction === "reverse"){
-
 			points     = [0, 1];
 			pathRatios = PS.func.calculate_bezierCurves(points);
 			xDistance  = obj.setting.position.default[0] - obj.setting.position.selected[0];
 			yDistance  = obj.setting.position.default[1] - obj.setting.position.selected[1];
-
 			for(let a = 0; a < pathRatios.length; a++){
-
 				let x = pathRatios[a][0] * xDistance;
 				let y = pathRatios[a][1] * yDistance;
-
 				coords.push( [x, y] );
-
 				if(a === pathRatios.length - 1){
 					obj.setting.position.swoopPath_reverse = coords;
 				};
@@ -318,8 +289,7 @@ PS.component.category.func.init_component = ()=>{
 		PS.component.category.func.calculate_swoopPath("forward");
 		PS.component.category.func.calculate_swoopPath("reverse");
 	});
-	// process timingControlPoints into timingRatios
-	PS.component.category.setting.timingRatios = PS.func.calculate_bezierCurves(PS.component.category.setting.timingControlPoints);
+	PS.component.category.setting.timing.ratios = PS.func.calculate_bezierCurves(PS.component.category.setting.timing.controlPoints); // process timingControlPoints into timingRatios
 };
 
 PS.component.category.func.init_stateAndView = ()=>{
@@ -355,7 +325,6 @@ PS.component.category.func.select_category = async(categoryObj)=>{
 /**
 SET
 ***/
-/* Different viewport(widthBreakpoint) sets different positions for obj/component/element */
 PS.component.category.func.set_positions_differentByViewport = (obj)=>{
 	return new Promise(async(resolve)=>{
 		let widthBreakpoint = 425;

@@ -16,7 +16,7 @@ PS.component.link.setting.position.extraTopForStartPosition = 29;
 PS.component.link.setting.marginTop = 15;
 PS.component.link.setting.height = 44;
 PS.component.link.setting.scrollTop = null;
-PS.component.link.setting.timingControlPoints = PS.component.category.setting.timingControlPoints;
+PS.component.link.setting.timing = {};
 
 
 /****
@@ -121,9 +121,9 @@ PS.component.link.func.animate_swoop = async(obj, direction)=>{
 
     			tRatio = (tCurr - tStart) / tTotal;
 
-    			for(let i = 0; i < PS.component.link.setting.timingRatios.length; i++){
+    			for(let i = 0; i < PS.component.link.setting.timing.ratios.length; i++){
 
-                    if(PS.component.link.setting.timingRatios[i][1] > tRatio){ /* passed current tRatio in pvtRatios array */
+                    if(PS.component.link.setting.timing.ratios[i][1] > tRatio){ /* passed current tRatio in pvtRatios array */
 
                         /* since passing current tRatio value in pvtRatios is condition to select, take an average of value before and after selected pvtRatio for better accuracy */
     					leftCurr        = ( (path[i - 1][0] + path[i + 1][0]) / 2 ) + sPos[0];
@@ -253,9 +253,6 @@ PS.component.link.func.factory = async(input)=>{
                     obj.setting.dimensions = link.dimensions;
                     obj.setting.url        = link.url;
                     obj.setting.github     = link.github;
-                    obj.setting.info       = link.info;
-                    obj.setting.keywords   = link.keywords;
-                    obj.setting.tech       = link.tech;
                     obj.setting.position = {};
                     obj.state = {};
                     obj.state.animating = false;
@@ -369,8 +366,8 @@ PS.component.link.func.init_component = ()=>{
         PS.component.link.func.init_stateAndView();
 	});
     // timingRatios set for category component will be set for link component
-    do{PS.component.link.setting.timingRatios = PS.component.category.setting.timingRatios;}
-    while(PS.component.link.setting.timingRatios.length === 0);
+    do{PS.component.link.setting.timing.ratios = PS.component.category.setting.timing.ratios;}
+    while(PS.component.link.setting.timing.ratios.length === 0);
 };
 
 

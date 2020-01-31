@@ -25,79 +25,79 @@ PS.component.link.input = [
         links: [
             {
                 name: "Reader",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["px", 320, 568]
             },
             {
                 name: "Personal Time Tracker",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["px", 320, 568]
             },
             {
                 name: "Upcoming Planner",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["px", 320, 568]
             },
             {
                 name: "Note Taker",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["px", 320, 568]
             },
             {
                 name: "Bezier Visualizer",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["%", 100, 100]
             },
             {
                 name: "Netrunner Decks",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["%", 100, 100]
             },
             {
                 name: "Toronto Area Resources",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["%", 100, 100]
             },
             {
                 name: "FitHub",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["%", 100, 100]
             },
             {
                 name: "Yumi Jobs",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["%", 100, 100]
             },
             {
                 name: "Food Fight",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["px", 320, 568]
             },
             {
                 name: "Time Slot",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["px", 320, 568]
             },
             {
                 name: "Ice Dogs",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["px", 320, 568]
             },
             {
                 name: "Chants",
-                url: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/newimp/greyBorder",
                 github: "https://github.com/philosopherstove",
                 dimensions: ["px", 320, 568]
             }

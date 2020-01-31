@@ -98,7 +98,7 @@ ACTION
 ******/
 PS.component.portrait.func.action_redrawPortrait = ()=>{
     let face = document.querySelector("svg #face");
-    if(face !== undefined){
+    if(face !== undefined || face !== null){
         let coords = [event.x, event.y];
         if(PS.func.test_isWithin(coords, face) === true){
             // category selected

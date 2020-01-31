@@ -1,42 +1,51 @@
 ===================
 component structure
 ===================
-input
-factory
-objs
-setting
-    position
-        timingControlPoints
-        timingRatios
-        x_default
-        x_selected
-        y_selected_desktop
-        y_selected_mobile
-state
-    animating
-    selected
 func
     animate_categoriesFadeIn
     animate_categoriesFadeOut
     animate_swoop
     apply_position
+    apply_style
+    apply_view
     calculate_swoopPath
+    factory
     get_unselectedCategoryObjs
+    give_component_urlState
+    init_component
+    init_stateAndView
     select_category
-    set_apply_positions
     set_positions_differentByViewport
     transition_categorySelected
     transition_categoryUnselected
+    transition_fromCategoryToHome
+    transition_fromHomeToCategory
+input
+objs
+setting
+    position
+        x_default
+        x_selected
+        y_selected_desktop
+        y_selected_mobile
+    timing
+        controlPoints
+        ratios
+state
+    animating
+    selected
+
 
 
 =============
 obj structure
 =============
 associated
+    links
 element
 setting
-    name
     color
+    name
     position
         default
         selected
