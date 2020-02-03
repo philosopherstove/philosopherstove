@@ -97,6 +97,7 @@ PS.component.portrait.func = {};
 ACTION
 ******/
 PS.component.portrait.func.action_redrawPortrait = ()=>{
+    if(PS.component.link.state.selected[0] === true){ return; };
     let face = document.querySelector("svg #face");
     if(face !== undefined || face !== null){
         let coords = [event.x, event.y];
