@@ -31,8 +31,8 @@ PS.component.link.input = [
             },
             {
                 name: "Upcoming Planner",
-                url: "https://philosopherstove.github.io/a5_dayPlanner/",
-                github: "https://github.com/philosopherstove",
+                url: "http://philosopherstove.com/upcomingplanner/",
+                github: "https://github.com/philosopherstove/upcomingplanner",
                 dimensions: ["px", 320, 568]
             },
             {
