@@ -11,7 +11,7 @@ PS.component.category.input = [
 	},
 	{
 		setting: {
-			name: "APPS",
+			name: "DEMOS",
 			color: "red_1",
 			position: {
 				y_default_desktop: 58,

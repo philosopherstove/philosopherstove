@@ -21,7 +21,7 @@ PS.component.link.input = [
         ]
     },
     {
-        category: "APPS",
+        category: "DEMOS",
         links: [
             {
                 name: "Time Tracker",
@@ -34,19 +34,6 @@ PS.component.link.input = [
                 url: "http://philosopherstove.com/upcomingplanner/",
                 github: "https://github.com/philosopherstove/upcomingplanner",
                 dimensions: ["px", 320, 568]
-            },
-            {
-                name: "Note Taker",
-                url: "https://notetaker-h.herokuapp.com/",
-                github: "https://github.com/philosopherstove",
-                dimensions: ["px", 320, 568]
-            },
-            {
-                name: "Password Generator",
-                url: "https://philosopherstove.github.io/passwordGenerator",
-                github: "https://github.com/philosopherstove",
-                dimensions: ["px", 320, 568]
-                // dimensions: ["%", 100, 100]
             }
         ]
     }
